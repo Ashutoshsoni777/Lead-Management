@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { leadAPI, userAPI } from '@/lib/api';
-import { MdArrowBack, MdCheckCircle, MdWarning, MdX } from 'react-icons/md';
+import { MdArrowBack, MdCheckCircle, MdWarning, MdClose } from 'react-icons/md';
 
 const SOURCES = ['website', 'referral', 'social_media', 'cold_call', 'email', 'other'];
 
@@ -116,7 +116,7 @@ export default function CreateLead() {
         <div className="bg-white rounded-lg shadow p-8">
           {error && (
             <div className="mb-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded flex items-center gap-2">
-              <MdX size={20} />
+              <MdClose size={20} />
               {error}
             </div>
           )}

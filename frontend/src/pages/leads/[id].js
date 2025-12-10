@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { leadAPI } from '@/lib/api';
-import { MdArrowBack, MdCheckCircle, MdX, MdWarning } from 'react-icons/md';
+import { MdArrowBack, MdCheckCircle, MdClose, MdWarning } from 'react-icons/md';
 
 const VALID_TRANSITIONS = {
   new: ['contacted', 'lost'],
@@ -127,7 +127,7 @@ export default function LeadDetail() {
       <div className="max-w-4xl mx-auto p-6">
         {error && (
           <div className="mb-4 bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded flex items-center gap-2">
-            <MdX size={20} />
+            <MdClose size={20} />
             {error}
           </div>
         )}
